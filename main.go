@@ -27,22 +27,9 @@ func main() {
 	api := router.Group("/api/v1")
 
 	api.POST("/users", userHandler.RegisterUser)
+	api.POST("/sessions", userHandler.Login)
 
 	router.Run()
-
-	// userInput := user.RegisterUserInput{}
-	// userInput.Name = "Tes simpan dari service"
-	// userInput.Email = "contoh@gmail.com"
-	// userInput.Occupation = "Band"
-	// userInput.Password = "password"
-
-	// userService.RegisterUser(userInput)
-
-	// user := user.User{
-	// 	Name: "Test Simpan",
-	// }
-
-	// userRepository.Save(user)
 
 	// input dari user
 	// handler, mapping input dari user -> struct input
